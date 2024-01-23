@@ -29,7 +29,6 @@ Users should be able to:
 ### Screenshot
 
 ![Desktop](./assets/images/Notifications-desktop.png)
-![Mobile](./assets/images/notifications-mobile.png)
 
 ### Links
 
