@@ -1,0 +1,124 @@
+
+.wrap {
+    flex-wrap: wrap;
+}
+
+.notification {
+    border-radius: 8px;
+    padding:18px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    cursor:default;
+    margin-bottom: 8px;
+}
+
+.notification-avatar {
+    border-radius: 100%;
+    width: 48px;
+    height: 48px;
+}
+
+.notification-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.notification-message {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+}
+
+.message {
+    padding: 24px;
+    border: 1px solid hsl(205, 33%, 90%) ;
+    font-weight: 500 !important;
+    border-radius: 4px;
+    color: hsl(219, 12%, 42%)!important;
+}
+
+.message:hover {
+    background-color:hsl(211, 68%, 94%) ;
+
+}
+
+.unread {
+    background-color:  hsl(210, 60%, 98%);
+    cursor: pointer;
+    
+}
+
+.unread .post {
+   color:hsl(219, 85%, 26%)
+}
+
+.dot::after {
+    content:'';
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin-left:8px;
+    background-color: hsl(1, 90%, 64%);
+    border-radius: 50%
+
+}
+
+
+.time-stamp {
+    color: hsl(219, 14%, 63%);
+}
+
+.user-name {
+    font-weight: 800;
+    color:hsl(224, 21%, 14%);
+    cursor: pointer;
+}
+
+.user-name:hover {
+    color:hsl(219, 85%, 26%) ;
+}
+
+.user-action {
+    color:hsl(219, 12%, 42%);
+}
+
+
+.post {
+    font-weight: 800;
+    color:hsl(219, 12%, 42%);
+}
+.post:hover {
+    font-weight: 800;
+    color:hsl(219, 85%, 26%) ;
+    cursor: pointer;
+}
+
+.image-link {
+    margin-left: auto;
+}
+.post-image {
+    box-sizing: border-box;
+    border-radius: 8px;
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+}
+
+
+.post-image:hover {
+    border: 2px solid hsl(211, 68%, 94%);
+}
+
+
+@media only screen and (max-width:400px)  {
+
+
+    .notification{
+        align-items: start;
+        padding: 16px;
+        gap:12px;
+        margin-bottom: 12px
+    }
+
+}

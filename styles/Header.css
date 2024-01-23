@@ -1,0 +1,52 @@
+
+
+.notifcation-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 32px;
+}
+
+.details {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+a {
+    text-decoration: none;
+    color: hsl(219, 12%, 42%) ;
+}
+
+a:hover {
+    color:hsl(219, 85%, 26%)
+ 
+ }
+
+
+.counter {
+    box-sizing: border-box;
+    padding:4px 12px 4px 12px;
+    border-radius: 4px;
+    width: fit-content;
+    height: fit-content;
+    background-color:hsl(219, 85%, 26%) ;
+    color: white;
+}
+
+
+@media only screen and (max-width:400px)  {
+
+    h1 {
+        font-size: 20px;
+    }
+
+
+    .notifcation-header {
+        align-items: center;
+    }
+
+
+    .counter {
+        font-size: 18px;
+    }
+}

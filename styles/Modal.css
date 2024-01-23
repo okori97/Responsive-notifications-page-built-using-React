@@ -1,0 +1,23 @@
+.modal {
+    margin: auto;
+    margin-top: 56px;
+    margin-bottom: 56px;
+    border-radius: 8px;
+    box-shadow: 8px 8px 40px hsla(0, 0%, 7%, 0.15);
+    background-color: white;
+    width: 650px;
+    max-width:100%;
+    padding:32px;
+
+}
+
+
+@media only screen and (max-width:400px)  {
+
+   
+    .modal {
+        padding: 16px;
+        margin:0px
+    }
+
+}
