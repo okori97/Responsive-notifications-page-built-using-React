@@ -22,7 +22,6 @@ export default function Modal(props) {
     }
   }, [props.items]); // Depend on props.item to re-run when it changes
 
-  // Optional: useEffect to observe changes in unreadNotifications
   useEffect(() => {
     console.log("Updated unread notifications:", unreadNotifications);
     setCurrentUnreadCount(unreadNotifications.length);

@@ -1,6 +1,6 @@
 # Frontend Mentor - Notifications page solution
 
-This is a solution to the [Notifications page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/notifications-page-DqK5QAmKbC). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+This is a solution to the [Notifications page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/notifications-page-DqK5QAmKbC). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 ## Table of contents
 
@@ -14,7 +14,6 @@ This is a solution to the [Notifications page challenge on Frontend Mentor](http
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
 
 **Note: Delete this note and update the table of contents based on what sections you keep.**
 
@@ -31,15 +30,8 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
-
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
+![Desktop](./assets/images/Notifications-desktop.png)
+![Mobile](./assets/images/notifications-mobile.png)
 
 ### Links
 
@@ -51,63 +43,61 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 ### Built with
 
 - Semantic HTML5 markup
-- CSS custom properties
 - Flexbox
-- CSS Grid
-- Mobile-first workflow
 - [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
+- [Webpack](https://webpack.js.org/) - JS bundler
 
 **Note: These are just examples. Delete this note and replace the list above with your own choices**
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+I learned about state management and passing state down to child components. I also learned more about Effects in react, as i had to use the dependecy array to look for changes in any elements of the unread notifications array. I also learned about webpack, which I had never used prior. I used it it add react into my then JS & HTML project. I learned that webpack can be to your front end server what nodemon is to your back end, and that was useful to know.
 
-To see how you can add code snippets, see below:
+Parts I am proud of below:
 
 ```html
 <h1>Some HTML code I'm proud of</h1>
 ```
+
 ```css
 .proud-of-this-css {
   color: papayawhip;
 }
 ```
+
+I'm quite proud of using filter here. Previously, I only used filter to select what I want. Here, I use it to select everything but what I don't want and that was cool.
+
 ```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
+const removeItem = (name) => {
+  setUnreadNotifications((unreadNotifications) => {
+    return unreadNotifications.filter(
+      (notifcation) => notifcation.userName !== name
+    );
+  });
+};
+
+const notifications = props.item || []; /* Subtle but I think having fallbacks for variables makes so much sense, and it's not something that I did before. */
+
+// dynamically applying classes using JSX. Was not sure it would work, was glad when it did.
+ <div class={"notification " + (isRead == false ? "unread" : "")} onClick={() => markRead(index)}>
+
+
 ```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+I feel like the notification component is really bloated. I've conditially rendered the notifcations based on the properties of the object, but there is a lot of repeated code. I'd like to continue learning how to do more with less. I also want to continue learning about state control and how best to use passed down props and functions.
 
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+I also want to continue learning about css. I feel like my UX background helps me get the UI right, but I feel like I can be more clever and clean about how i define my styles and use them. I probably could have used css variables here to make managing the styles easier (Imagine the company decides to change it's primary blue to red, updating that as is would demand a trawl through the css).
+
+I'd like to come back to this project and make it full stack by building an express backend.
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+- [using spread in react state arrays](https://react.dev/learn/updating-objects-in-state#copying-objects-with-the-spread-syntax) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+- Website - [Okori Lewis-McCalla](https://www.okori.com)
+- Frontend Mentor - [@okori97](https://www.frontendmentor.io/profile/okori97)
+- Twitter - [@onlyokori](https://www.twitter.com/onlyokori)
