@@ -79,7 +79,7 @@ I'd like to come back to this project and make it full stack by building an expr
 
 ### Useful resources
 
-- [using spread in react state arrays](https://react.dev/learn/updating-objects-in-state#copying-objects-with-the-spread-syntax) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
+- [using spread in react state arrays](https://react.dev/learn/updating-objects-in-state#copying-objects-with-the-spread-syntax) - This helped me with updating state arrays
 
 ## Author
 
