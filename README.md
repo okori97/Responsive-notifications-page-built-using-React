@@ -50,16 +50,6 @@ I learned about state management and passing state down to child components. I a
 
 Parts I am proud of below:
 
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-
 I'm quite proud of using filter here. Previously, I only used filter to select what I want. Here, I use it to select everything but what I don't want and that was cool.
 
 ```js
